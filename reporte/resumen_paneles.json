@@ -1,49 +1,63 @@
 [
   {
-    "panel": "Escaloneta",
-    "total_mensajes_hoy": 34,
-    "detalle_por_origen": [
-      "clientify"
-    ]
-  },
-  {
-    "panel": "Open",
-    "total_mensajes_hoy": 37,
-    "detalle_por_origen": [
-      "clientify"
-    ]
-  },
-  {
-    "panel": "Luck",
-    "total_mensajes_hoy": 29,
-    "detalle_por_origen": [
-      "clientify"
-    ]
-  },
-  {
-    "panel": "Miami",
-    "total_mensajes_hoy": 20,
-    "detalle_por_origen": [
-      "clientify"
-    ]
-  },
-  {
-    "panel": "Dragon",
-    "total_mensajes_hoy": 67,
+    "panel": "Oporto",
+    "total_mensajes_hoy": 47,
     "detalle_por_origen": [
       "clientify"
     ]
   },
   {
     "panel": "Thiagop",
-    "total_mensajes_hoy": 121,
+    "total_mensajes_hoy": 129,
+    "detalle_por_origen": [
+      "clientify"
+    ]
+  },
+  {
+    "panel": "Escaloneta",
+    "total_mensajes_hoy": 36,
+    "detalle_por_origen": [
+      "clientify"
+    ]
+  },
+  {
+    "panel": "Miami",
+    "total_mensajes_hoy": 22,
+    "detalle_por_origen": [
+      "clientify"
+    ]
+  },
+  {
+    "panel": "Luck",
+    "total_mensajes_hoy": 36,
+    "detalle_por_origen": [
+      "clientify"
+    ]
+  },
+  {
+    "panel": "Cyber",
+    "total_mensajes_hoy": 10,
+    "detalle_por_origen": [
+      "clientify"
+    ]
+  },
+  {
+    "panel": "Dragon",
+    "total_mensajes_hoy": 82,
+    "detalle_por_origen": [
+      "clientify"
+    ]
+  },
+  {
+    "panel": "Detager",
+    "total_mensajes_hoy": 7,
     "detalle_por_origen": [
       "clientify"
     ]
   },
   {
     "panel": "Omaris",
-    "total_mensajes_hoy": 7,
+    "total_mensajes_hoy": 10,
     "detalle_por_origen": [
       "clientify"
     ]
@@ -56,22 +70,8 @@
     ]
   },
   {
-    "panel": "Oporto",
-    "total_mensajes_hoy": 37,
-    "detalle_por_origen": [
-      "clientify"
-    ]
-  },
-  {
-    "panel": "Cyber",
-    "total_mensajes_hoy": 2,
-    "detalle_por_origen": [
-      "clientify"
-    ]
-  },
-  {
-    "panel": "Detager",
-    "total_mensajes_hoy": 5,
+    "panel": "Open",
+    "total_mensajes_hoy": 42,
     "detalle_por_origen": [
       "clientify"
     ]
