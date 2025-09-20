@@ -1,4 +1,4 @@
-const fs = require("fs");
+import fs from 'fs';
 
 function ajustarFechaArgentina(fechaStr) {
   // Convierte cualquier fecha ISO a la hora real de Argentina (UTC-3)
@@ -30,7 +30,10 @@ function filtrarContactosHoyArgentina(contactos) {
   });
 }
 
-const path = require('path');
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const DATOS_DIR = path.join(__dirname, '../datos');
 const CONTACTS_RAW_PATH = path.join(DATOS_DIR, 'contacts_raw.json');
 const CONTACTS_HOY_PATH = path.join(DATOS_DIR, 'contactos_hoy.json');
@@ -55,12 +58,32 @@ function toArgentinaISOString(date) {
   return `${year}-${month}-${day}T${hour}:${min}:${sec}.${ms}-03:00`;
 }
 
+
 const contactosHoyArgentina = contactosHoy.map(c => ({
   ...c,
   created: toArgentinaISOString(ajustarFechaArgentina(c.created)),
   modified: toArgentinaISOString(ajustarFechaArgentina(c.modified))
 }));
 
+// Contadores de created y modified de hoy
+const ahora = new Date();
+const utc = ahora.getTime() + (ahora.getTimezoneOffset() * 60000);
+const hoyArgentina = new Date(utc - (3 * 60 * 60 * 1000));
+hoyArgentina.setHours(0, 0, 0, 0);
+const inicio = new Date(hoyArgentina);
+const fin = new Date(hoyArgentina.getTime() + 24 * 60 * 60 * 1000 - 1);
+
+let countCreated = 0;
+let countModified = 0;
+for (const c of contactos) {
+  const created = ajustarFechaArgentina(c.created);
+  const modified = ajustarFechaArgentina(c.modified);
+  if (created >= inicio && created <= fin) countCreated++;
+  if (modified >= inicio && modified <= fin) countModified++;
+}
+
 fs.writeFileSync(CONTACTS_HOY_PATH, JSON.stringify(contactosHoyArgentina, null, 2), "utf-8");
 console.log(`Contactos de hoy: ${contactosHoyArgentina.length}`);
+console.log(`Contactos creados hoy: ${countCreated}`);
+console.log(`Contactos modificados hoy: ${countModified}`);
 console.log("Archivo guardado en:", CONTACTS_HOY_PATH);

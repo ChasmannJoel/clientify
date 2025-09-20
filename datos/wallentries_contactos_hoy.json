@@ -1,0 +1,74 @@
+[
+  {
+    "contact_id": 127595772,
+    "wallentries": [
+      {
+        "url": "https://api-plus.clientify.com/api/core/wall-entries/3831010424/",
+        "id": 3831010424,
+        "user": "Panel Luck",
+        "created": "2025-09-19T01:43:07.390990-03:00",
+        "extra": {
+          "conversation_status": "open",
+          "channel_type": "whatsapp",
+          "channel_name": "Luck - Ads321 - Lourdes Castro",
+          "message": "no a este",
+          "message_link": "#",
+          "type": "incoming",
+          "whatsapp_phone": "+5491159382966",
+          "whatsapp_message": "no a este",
+          "message_id": 363928618
+        },
+        "extra_datetime": null,
+        "extra_datetime2": null,
+        "type": "inbox_conversation",
+        "link": "",
+        "source_id": "28559757",
+        "object_id": 127595772,
+        "pay_attention": null,
+        "comments": []
+      },
+      {
+        "url": "https://api-plus.clientify.com/api/core/wall-entries/3831007598/",
+        "id": 3831007598,
+        "user": "Panel Oporto",
+        "created": "2025-09-19T01:16:55.262176-03:00",
+        "extra": {
+          "conversation_status": "open",
+          "channel_type": "whatsapp",
+          "channel_name": "Oporto- Sevda Erçetin 1- Marian Zambrano",
+          "message": "¡Bienvenid@ a  Oport0 SL0TS! 🎲\nEstamos activos con 24HS, la mejor PL4T4F0RM4 G4N4M0S 🔥\n\n* CARG4 mínima: $1.000\n* RET1RO mínimo: $4.000\n* RET1RO máximo: $300.000\n* 1 RET1RO x jug4d0r cada 24HS\n\n🎉 ¡Tu primer REC4RGA viene con $2000 de REG4L0! ( NO retirables )\n🎯 Te creamos el USUAR1O GR4TIS con tu nombre 🍀",
+          "message_link": "#",
+          "type": "incoming",
+          "whatsapp_phone": "+5491159382966",
+          "whatsapp_message": "¡Bienvenid@ a  Oport0 SL0TS! 🎲\nEstamos activos con 24HS, la mejor PL4T4F0RM4 G4N4M0S 🔥\n\n* CARG4 mínima: $1.000\n* RET1RO mínimo: $4.000\n* RET1RO máximo: $300.000\n* 1 RET1RO x jug4d0r cada 24HS\n\n🎉 ¡Tu primer REC4RGA viene con $2000 de REG4L0! ( NO retirables )\n🎯 Te creamos el USUAR1O GR4TIS con tu nombre 🍀",
+          "message_id": 363926135
+        },
+        "extra_datetime": null,
+        "extra_datetime2": null,
+        "type": "inbox_conversation",
+        "link": "",
+        "source_id": "28559705",
+        "object_id": 127595772,
+        "pay_attention": null,
+        "comments": []
+      },
+      {
+        "url": "https://api-plus.clientify.com/api/core/wall-entries/3831007597/",
+        "id": 3831007597,
+        "user": "Panel Oporto",
+        "created": "2025-09-19T00:49:23.241457-03:00",
+        "extra": {
+          "channel_name": "Oporto- Sevda Erçetin 1- Marian Zambrano"
+        },
+        "extra_datetime": null,
+        "extra_datetime2": null,
+        "type": "contact_creation_from_inbox",
+        "link": "",
+        "source_id": "25977",
+        "object_id": 127595772,
+        "pay_attention": null,
+        "comments": []
+      }
+    ]
+  }
+]

@@ -1,11 +1,17 @@
-const { spawn } = require('child_process');
-const path = require('path');
+import { spawn } from 'child_process';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const scripts = [
   '1_fetch_contacts.js',
   '2_hoy.js',
-  '3_wallentrie.js',
-  '5_reporte.js'
+  '3_descargar_wallentries.js',
+  '4_procesar_wallentrie.js',
+  '5_flags.js',
+  '6_reporte.js'
 ];
 
 async function runScript(script) {
@@ -32,5 +38,7 @@ async function runScript(script) {
       process.exit(1);
     }
   }
-  console.log('\n✅ Proceso completo. Todos los scripts ejecutados.');
+  const end = new Date();
+  const hora = end.toLocaleTimeString();
+  console.log(`\n✅ Proceso completo. Todos los scripts ejecutados.\nHora de finalización: ${hora}`);
 })();

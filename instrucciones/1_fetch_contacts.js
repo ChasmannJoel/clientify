@@ -1,7 +1,10 @@
-// fetch_contacts.js
-const fetch = require('node-fetch');
-const fs = require('fs');
-const path = require('path');
+
+import fetch from 'node-fetch';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const API_TOKEN = "c464da16552a931e1a4c5a6d65fee1e6c7ea422d";
 const RAW_DATA_FILE = path.join(__dirname, '../datos/contacts_raw.json');
