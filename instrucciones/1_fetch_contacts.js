@@ -145,6 +145,9 @@ async function fetchAllContacts() {
     fetchByTipo("modified", inicioUTC, finUTC)
   ]);
 
+  console.log(`🟢 Contactos traídos por created: ${contactosCreated.length}`);
+  console.log(`🟡 Contactos traídos por modified: ${contactosModified.length}`);
+
   // Combinamos eliminando duplicados (por id)
   const mapa = new Map();
   [...contactosCreated, ...contactosModified].forEach(c => {
