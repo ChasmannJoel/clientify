@@ -61,34 +61,21 @@ async function fetchConReintentos(url, headers, intentos = 10, espera = 10000) {
 // -------------------------
 function generarRangoUTC() {
   const ahora = new Date();
-  const formatter = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "America/Argentina/Buenos_Aires",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit"
-  });
+  
+  // Calcular ayer, hoy y mañana en UTC (solo fechas, sin horas)
+  const ayer = new Date(ahora);
+  ayer.setUTCDate(ahora.getUTCDate() - 1);
+  
+  const manana = new Date(ahora);
+  manana.setUTCDate(ahora.getUTCDate() + 1);
 
-  const partes = formatter.formatToParts(ahora);
-  const year = partes.find(p => p.type === "year").value;
-  const month = partes.find(p => p.type === "month").value;
-  const day = partes.find(p => p.type === "day").value;
+  // Formatear como YYYY-MM-DD + T00:00:00Z
+  const inicioUTC = ayer.toISOString().split("T")[0] + "T00:00:00Z";
+  const finUTC = manana.toISOString().split("T")[0] + "T00:00:00Z";
 
-  const hoy = new Date(`${year}-${month}-${day}T00:00:00-03:00`);
+  console.log(`� Rango UTC: desde ${inicioUTC} hasta ${finUTC}`);
 
-  const inicio = new Date(hoy);
-  inicio.setDate(hoy.getDate() - 1);
-
-  const fin = new Date(hoy);
-  fin.setDate(hoy.getDate() + 1);
-
-  function formatFecha(d) {
-    return d.toISOString().split("T")[0] + "T00:00:00Z";
-  }
-
-  return {
-    inicioUTC: formatFecha(inicio),
-    finUTC: formatFecha(fin)
-  };
+  return { inicioUTC, finUTC };
 }
 
 function generarEndpoint(tipo, inicioUTC, finUTC) {

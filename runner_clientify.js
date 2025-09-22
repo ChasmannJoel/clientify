@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 const scripts = [
   '1_fetch_contacts.js',
   '2_hoy.js',
-  '3_descargar_wallentries.js',
-  '4_procesar_wallentrie.js',
+  '3_procesar_wallentrie.js',
+  '4_descargar_wallentries.js',
   '5_flags.js',
   '6_reporte.js'
 ];
